@@ -1,0 +1,18 @@
+:root {
+  --hearts-card-color: #CE0E2C;
+  --diamonds-card-color: #CE0E2C;
+  --clubs-card-color: #000;
+  --spades-card-color: #000;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gothic A1", serif;
+}
+
+body {
+  padding: 3rem;
+}

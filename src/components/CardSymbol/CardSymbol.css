@@ -1,0 +1,24 @@
+.card-symbol {
+    width: 100%;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hearts {
+    background-image: url(../../../public/hearts.svg);
+    height: 25px;
+}
+
+.diamonds {
+    background-image: url(../../../public/diamonds.svg);
+    height: 30px;
+}
+
+.clubs {
+    background-image: url(../../../public/clubs.svg);
+}
+
+.spades {
+    background-image: url(../../../public/spades.svg);
+}
