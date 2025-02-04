@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Card naipe="hearts"/>
+      <Card naipe="clubs" number={4}/>
     </>
   )
 }
