@@ -1,11 +1,11 @@
 import './App.css';
-import Card from './components/Card/Card';
+import Hand from './components/Hand/Hand';
 
 function App() {
 
   return (
     <>
-      <Card naipe="clubs" number={4}/>
+      <Hand/>
     </>
   )
 }

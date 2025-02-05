@@ -116,3 +116,79 @@
 .card-middle-content .card-middle-content-left-four {
     justify-content: space-between;
 }
+
+/* FIVE */
+.card-middle-content .card-middle-content-center-five div:nth-child(n+2)  {
+    display: none;
+}
+
+.card-middle-content .card-middle-content-center-five {
+    justify-content: center;
+}
+
+.card-middle-content .card-middle-content-center-five div:nth-child(1){
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-five div:nth-child(n+3) ,
+.card-middle-content .card-middle-content-left-five div:nth-child(n+3) {
+    display: none;
+}
+
+.card-middle-content .card-middle-content-right-five div:nth-child(1),
+.card-middle-content .card-middle-content-left-five div:nth-child(1) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-five,
+.card-middle-content .card-middle-content-left-five {
+    justify-content: space-between;
+}
+
+/* SIX */
+.card-middle-content .card-middle-content-center-six {
+    visibility: hidden;
+}
+
+.card-middle-content .card-middle-content-right-six div:nth-child(n+4) ,
+.card-middle-content .card-middle-content-left-six div:nth-child(n+4) {
+    display: none;
+}
+
+.card-middle-content .card-middle-content-right-six div:nth-child(1),
+.card-middle-content .card-middle-content-left-six div:nth-child(1) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-six,
+.card-middle-content .card-middle-content-left-six {
+    justify-content: space-between;
+}
+
+/* SEVEN */
+.card-middle-content .card-middle-content-center-seven div:nth-child(n+3){
+    display: none;
+}
+.card-middle-content .card-middle-content-center-seven div:nth-child(n+2){
+    visibility: hidden;
+}
+
+.card-middle-content .card-middle-content-center-seven {
+    justify-content: space-around;
+}
+
+.card-middle-content .card-middle-content-right-seven div:nth-child(n+4) ,
+.card-middle-content .card-middle-content-left-seven div:nth-child(n+4) {
+    display: none;
+}
+
+.card-middle-content .card-middle-content-center-seven div:nth-child(1),
+.card-middle-content .card-middle-content-right-seven div:nth-child(-n+2),
+.card-middle-content .card-middle-content-left-seven div:nth-child(-n+2) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-seven,
+.card-middle-content .card-middle-content-left-seven {
+    justify-content: space-between;
+}
