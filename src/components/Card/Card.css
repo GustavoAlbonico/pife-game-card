@@ -1,6 +1,6 @@
 .card {
-    width: 156px;
-    height: 210px;
+    width: 145px;
+    height: 200px;
     padding: 4px 0px;
 
     box-shadow: 0px 0px 4px 0px #00000050;
@@ -13,37 +13,42 @@
 }
 
 .card-left {
-    text-align: center;
     align-self: flex-start;
 }
 
 .card-right {
-    text-align: center;
     align-self: flex-end;
     rotate: 180deg;
 }
 
 .card-number {
+    display: block;
     font-size: 1.75rem;
     color: #CE0E2C;
+    line-height: 28px;
 }
 
 .card-middle {
     margin: 1.5rem 0;
     border: 1px solid #68613eb9;
-    padding: 2px;background-color: #F3EBCA;
+    padding: 2px;
+    background-color: #f3ebca93;
 }
 
 .card-middle-content {
+    background-color: #F6F6F6;
     width: 100%;
     height: 100%;
-    padding-block: 6px;
+    padding-block: 4px;
     border: 1px solid #68613eb9;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 4/25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 .card-middle-content > div {
@@ -174,7 +179,7 @@
 }
 
 .card-middle-content .card-middle-content-center-seven {
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .card-middle-content .card-middle-content-right-seven div:nth-child(n+4) ,
@@ -191,4 +196,148 @@
 .card-middle-content .card-middle-content-right-seven,
 .card-middle-content .card-middle-content-left-seven {
     justify-content: space-between;
+}
+
+/* EIGHT */
+.card-middle-content .card-middle-content-center-eight div:nth-child(n+3){
+    display: none;
+}
+
+.card-middle-content .card-middle-content-right-eight div:nth-child(n+4) ,
+.card-middle-content .card-middle-content-left-eight div:nth-child(n+4) {
+    display: none;
+}
+
+.card-middle-content .card-middle-content-center-eight div:nth-child(1),
+.card-middle-content .card-middle-content-right-eight div:nth-child(-n+2),
+.card-middle-content .card-middle-content-left-eight div:nth-child(-n+2) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-eight,
+.card-middle-content .card-middle-content-left-eight {
+    justify-content: space-between;
+}
+
+/* NINE */
+.card-middle-content .card-middle-content-center-nine div:nth-child(n+2){
+    display: none;
+}
+
+.card-middle-content .card-middle-content-right-nine div:nth-child(-n+2),
+.card-middle-content .card-middle-content-left-nine div:nth-child(-n+2) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-nine,
+.card-middle-content .card-middle-content-left-nine {
+    justify-content: space-between;
+}
+
+/* TEN */
+.card-middle-content .card-middle-content-center-ten div:nth-child(n+3){
+    display: none;
+}
+
+.card-middle-content .card-middle-content-center-ten {
+    justify-content: space-around;
+}
+
+.card-middle-content .card-middle-content-center-ten div:nth-child(1),
+.card-middle-content .card-middle-content-right-ten div:nth-child(-n+2),
+.card-middle-content .card-middle-content-left-ten div:nth-child(-n+2) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-right-ten,
+.card-middle-content .card-middle-content-left-ten {
+    justify-content: space-between;
+}
+
+/* ELEVEN - TWELVE - THIRTEEN */
+.card-middle-content .card-middle-content-center-thirteen div,
+
+.card-middle-content .card-middle-content-center-twelve div,
+
+.card-middle-content .card-middle-content-center-eleven div{
+    display: none;
+}
+
+.card-middle-content .card-middle-content-right-thirteen div:nth-child(n+2),
+.card-middle-content .card-middle-content-left-thirteen div:nth-child(n+2),
+
+.card-middle-content .card-middle-content-right-twelve div:nth-child(n+2),
+.card-middle-content .card-middle-content-left-twelve div:nth-child(n+2),
+
+.card-middle-content .card-middle-content-right-eleven div:nth-child(n+2),
+.card-middle-content .card-middle-content-left-eleven div:nth-child(n+2){
+    display: none;
+}
+
+.card-middle-content .card-middle-content-left-thirteen div:nth-child(1),
+
+.card-middle-content .card-middle-content-left-twelve div:nth-child(1),
+
+.card-middle-content .card-middle-content-left-eleven div:nth-child(1) {
+    rotate: 0deg;
+}
+
+.card-middle-content .card-middle-content-left-thirteen,
+
+.card-middle-content .card-middle-content-left-twelve,
+
+.card-middle-content .card-middle-content-left-eleven {
+    justify-content: start;
+}
+
+.card-middle-content .card-middle-content-right-thirteen,
+
+.card-middle-content .card-middle-content-right-twelve,
+
+.card-middle-content .card-middle-content-right-eleven {
+    justify-content: end;
+}
+
+.thirteen {
+    background-image: url(../../../public/king-background.png);
+
+}
+
+.eleven-hearts {
+    background-image: url(../../../public/jack-hearts-background.png);
+}
+.eleven-diamonds {
+    background-image: url(../../../public/jack-diamonds-background.png);
+}
+.eleven-spades {
+    background-image: url(../../../public/jack-spades-background.png);
+}
+.eleven-clubs {
+    background-image: url(../../../public/jack-clubs-background.png);
+}
+
+.twelve-hearts {
+    background-image: url(../../../public/queen-hearts-background.png);
+}
+.twelve-diamonds {
+    background-image: url(../../../public/queen-diamonds-background.png);
+}
+.twelve-spades {
+    background-image: url(../../../public/queen-spades-background.png);
+}
+.twelve-clubs {
+    background-image: url(../../../public/queen-clubs-background.png);
+}
+
+.thirteen-hearts {
+    background-image: url(../../../public/king-hearts-background.png);
+}
+.thirteen-diamonds {
+    background-image: url(../../../public/king-diamonds-background.png);
+}
+.thirteen-spades {
+    background-image: url(../../../public/king-spades-background.png);
+}
+.thirteen-clubs {
+    background-image: url(../../../public/king-clubs-background.png);
 }

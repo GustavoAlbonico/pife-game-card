@@ -78,7 +78,9 @@ const Card = ({ naipe, number }: CardProps) => {
                 <span
                     className="card-number"
                     style={{
-                        color: findColor(naipe)
+                        color: findColor(naipe),
+                        letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
+                        textAlign: (number === 10 ? "left" : "center"),
                     }}
                 >
                     {numberToRepresentationCardNumber(number)}
@@ -86,7 +88,7 @@ const Card = ({ naipe, number }: CardProps) => {
                 <CardSymbol naipe={naipe} />
             </div>
             <div className="card-middle">
-                <div className="card-middle-content">
+                <div className={`card-middle-content ${numberToString(number)}-${naipe}`}>
                     <div className={`card-middle-content-left-${numberToString(number)}`}>
                         <CardSymbol naipe={naipe} />
                         <CardSymbol naipe={naipe} />
@@ -111,7 +113,9 @@ const Card = ({ naipe, number }: CardProps) => {
                 <span
                     className="card-number"
                     style={{
-                        color: findColor(naipe)
+                        color: findColor(naipe),
+                        letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
+                        textAlign: (number === 10 ? "left" : "center"),
                     }}
                 >
                     {numberToRepresentationCardNumber(number)}

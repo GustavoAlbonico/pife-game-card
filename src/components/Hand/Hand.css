@@ -1,3 +1,6 @@
 .hand {
     list-style: none;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(8,1fr);
 }
