@@ -5,7 +5,16 @@ function App() {
 
   return (
     <>
-      <Hand/>
+      <main id="table">
+        <section className="adversary-side">
+          
+        </section>
+        <section className="main-side">
+        </section>
+        <section className="my-side">
+          <Hand />
+        </section>
+      </main>
     </>
   )
 }

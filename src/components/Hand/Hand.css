@@ -1,6 +1,37 @@
 .hand {
+    width: 40%;
+    margin: 0 auto;
     list-style: none;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(8,1fr);
+    position: relative;
+}
+
+.hand > li:nth-child(1) > div {
+    transform: rotate(155deg) translate(-5%,25%);
+}
+.hand > li:nth-child(2) > div {
+    transform: rotate(160deg) translate(-30%,25%);;
+}
+.hand > li:nth-child(3) > div {
+    transform: rotate(165deg) translate(-55%,25%);
+}
+.hand > li:nth-child(4) > div {
+    transform: rotate(170deg) translate(-80%,28%);
+}
+.hand > li:nth-child(5) > div {
+    transform: rotate(173deg) translate(-105%,30%);
+}
+.hand > li:nth-child(6) > div {
+    transform: rotate(175deg) translate(-130%,32%);
+}
+.hand > li:nth-child(7) > div {
+    transform: rotate(180deg) translate(-153%,38%);
+}
+.hand > li:nth-child(8) > div {
+    transform: rotate(185deg) translate(-170%,45%);
+}
+.hand > li:nth-child(9) > div {
+    transform: rotate(190deg) translate(-188%,53%);
+}
+.hand > li:nth-child(10) > div {
+    transform: rotate(195deg) translate(-205%,62%);
 }
