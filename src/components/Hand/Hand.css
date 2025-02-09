@@ -1,37 +1,68 @@
 .hand {
-    width: 40%;
+    width: 32%;
+    rotate: 1deg;
     margin: 0 auto;
-    list-style: none;
     position: relative;
 }
 
-.hand > li:nth-child(1) > div {
-    transform: rotate(155deg) translate(-5%,25%);
+.hand:not(.hand-adversary) {
+    transform: perspective(500px) rotateX(-4deg);
 }
-.hand > li:nth-child(2) > div {
-    transform: rotate(160deg) translate(-30%,25%);;
+
+.hand:not(.hand-adversary) > li > .card:hover {
+    top: -50px;
 }
-.hand > li:nth-child(3) > div {
-    transform: rotate(165deg) translate(-55%,25%);
+
+.hand-adversary {
+    transform: translate(2%, 65px) scale(0.8) perspective(500px) rotateX(-15deg);
+    transform-origin: center;
+    rotate: 3deg;
 }
-.hand > li:nth-child(4) > div {
-    transform: rotate(170deg) translate(-80%,28%);
+
+.hand-adversary > li > .card {
+    cursor: default;
 }
-.hand > li:nth-child(5) > div {
-    transform: rotate(173deg) translate(-105%,30%);
+
+.hand-adversary > li > .card:hover {
+    top:-5px
 }
-.hand > li:nth-child(6) > div {
-    transform: rotate(175deg) translate(-130%,32%);
+
+.hand>li:nth-child(1)>.card {
+    transform: rotate(155deg) translate(-5%, 25%);
 }
-.hand > li:nth-child(7) > div {
-    transform: rotate(180deg) translate(-153%,38%);
+
+.hand>li:nth-child(2)>.card {
+    transform: rotate(160deg) translate(-30%, 25%);
 }
-.hand > li:nth-child(8) > div {
-    transform: rotate(185deg) translate(-170%,45%);
+
+.hand>li:nth-child(3)>.card {
+    transform: rotate(165deg) translate(-55%, 25%);
 }
-.hand > li:nth-child(9) > div {
-    transform: rotate(190deg) translate(-188%,53%);
+
+.hand>li:nth-child(4)>.card {
+    transform: rotate(170deg) translate(-80%, 28%);
 }
-.hand > li:nth-child(10) > div {
-    transform: rotate(195deg) translate(-205%,62%);
+
+.hand>li:nth-child(5)>.card {
+    transform: rotate(175deg) translate(-105%, 32%);
+}
+
+.hand>li:nth-child(6)>.card {
+    transform: rotate(181deg) translate(-126%, 38%);
+}
+
+.hand>li:nth-child(7)>.card {
+    transform: rotate(185deg) translate(-152%, 43%);
+}
+
+.hand>li:nth-child(8)>.card {
+    transform: rotate(190deg) translate(-175%, 51%);
+}
+
+.hand>li:nth-child(9)>.card {
+    transform: rotate(195deg) translate(-195%, 61%);
+}
+
+.hand>li:nth-child(10)>.card {
+    transform: rotate(200deg) translate(-212%, 71%);
 }

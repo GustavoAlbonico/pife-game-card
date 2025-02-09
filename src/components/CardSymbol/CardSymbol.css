@@ -7,19 +7,19 @@
 }
 
 .hearts {
-    background-image: url(../../../public/hearts.svg);
+    background-image: url(../../../hearts.svg);
     height: 25px;
 }
 
 .diamonds {
-    background-image: url(../../../public/diamonds.svg);
+    background-image: url(../../../diamonds.svg);
     height: 30px;
 }
 
 .clubs {
-    background-image: url(../../../public/clubs.svg);
+    background-image: url(../../../clubs.svg);
 }
 
 .spades {
-    background-image: url(../../../public/spades.svg);
+    background-image: url(../../../spades.svg);
 }

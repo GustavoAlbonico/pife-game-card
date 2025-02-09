@@ -1,12 +1,15 @@
 
+import { CardNaipes, CardNumbers } from "../../types/Card";
 import CardSymbol from "../CardSymbol/CardSymbol";
 import "./Card.css";
 
 type CardProps = {
-    naipe: "hearts" | "diamonds" | "clubs" | "spades",
-    number: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13,
+    naipe?: CardNaipes,
+    number?: CardNumbers,
+    visibleSide: "front" | "back",
+
 }
-const Card = ({ naipe, number }: CardProps) => {
+const Card = ({ naipe, number, visibleSide }: CardProps) => {
 
     const numberToRepresentationCardNumber = (number: number): string | number => {
 
@@ -23,6 +26,7 @@ const Card = ({ naipe, number }: CardProps) => {
                 return number;
         }
     }
+
     const numberToString = (number: number): string => {
 
         switch (number) {
@@ -73,56 +77,59 @@ const Card = ({ naipe, number }: CardProps) => {
     }
 
     return (
-        <div className="card">
-            <div className="card-left">
-                <span
-                    className="card-number"
-                    style={{
-                        color: findColor(naipe),
-                        letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
-                        textAlign: (number === 10 ? "left" : "center"),
-                    }}
-                >
-                    {numberToRepresentationCardNumber(number)}
-                </span>
-                <CardSymbol naipe={naipe} />
-            </div>
-            <div className="card-middle">
-                <div className={`card-middle-content ${numberToString(number)}-${naipe}`}>
-                    <div className={`card-middle-content-left-${numberToString(number)}`}>
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                    </div>
-                    <div className={`card-middle-content-center-${numberToString(number)}`}>
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                    </div>
-                    <div className={`card-middle-content-right-${numberToString(number)}`}>
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
-                        <CardSymbol naipe={naipe} />
+        <div className={`card ${visibleSide === "back" ? "card-visible-back-side" : ''}`}>
+
+            {number && naipe && visibleSide === "front" &&  <>
+                <div className="card-left">
+                    <span
+                        className="card-number"
+                        style={{
+                            color: findColor(naipe),
+                            letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
+                            textAlign: (number === 10 ? "left" : "center"),
+                        }}
+                    >
+                        {numberToRepresentationCardNumber(number)}
+                    </span>
+                    <CardSymbol naipe={naipe} />
+                </div>
+                <div className="card-middle">
+                    <div className={`card-middle-content ${numberToString(number)}-${naipe}`}>
+                        <div className={`card-middle-content-left-${numberToString(number)}`}>
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                        </div>
+                        <div className={`card-middle-content-center-${numberToString(number)}`}>
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                        </div>
+                        <div className={`card-middle-content-right-${numberToString(number)}`}>
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                            <CardSymbol naipe={naipe} />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="card-right">
-                <span
-                    className="card-number"
-                    style={{
-                        color: findColor(naipe),
-                        letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
-                        textAlign: (number === 10 ? "left" : "center"),
-                    }}
-                >
-                    {numberToRepresentationCardNumber(number)}
-                </span>
-                <CardSymbol naipe={naipe} />
-            </div>
-
+                <div className="card-right">
+                    <span
+                        className="card-number"
+                        style={{
+                            color: findColor(naipe),
+                            letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
+                            textAlign: (number === 10 ? "left" : "center"),
+                        }}
+                    >
+                        {numberToRepresentationCardNumber(number)}
+                    </span>
+                    <CardSymbol naipe={naipe} />
+                </div>
+            </>}
+            
         </div>
     )
 }

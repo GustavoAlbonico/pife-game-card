@@ -1,4 +1,7 @@
 .card {
+    user-select: none;
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -14,6 +17,15 @@
     display: grid;
     grid-template-columns: 18% 64% 18%;
     grid-template-rows: auto;
+
+    transition: 0.3s ease-in-out 0.1s;
+}
+
+.card.card-visible-back-side {
+    background-image: url(../../../adversary-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 .card-left {
@@ -303,45 +315,45 @@
 }
 
 .thirteen {
-    background-image: url(../../../public/king-background.png);
+    background-image: url(../../../king-background.png);
 
 }
 
 .eleven-hearts {
-    background-image: url(../../../public/jack-hearts-background.png);
+    background-image: url(../../../jack-hearts-background.png);
 }
 .eleven-diamonds {
-    background-image: url(../../../public/jack-diamonds-background.png);
+    background-image: url(../../../jack-diamonds-background.png);
 }
 .eleven-spades {
-    background-image: url(../../../public/jack-spades-background.png);
+    background-image: url(../../../jack-spades-background.png);
 }
 .eleven-clubs {
-    background-image: url(../../../public/jack-clubs-background.png);
+    background-image: url(../../../jack-clubs-background.png);
 }
 
 .twelve-hearts {
-    background-image: url(../../../public/queen-hearts-background.png);
+    background-image: url(../../../queen-hearts-background.png);
 }
 .twelve-diamonds {
-    background-image: url(../../../public/queen-diamonds-background.png);
+    background-image: url(../../../queen-diamonds-background.png);
 }
 .twelve-spades {
-    background-image: url(../../../public/queen-spades-background.png);
+    background-image: url(../../../queen-spades-background.png);
 }
 .twelve-clubs {
-    background-image: url(../../../public/queen-clubs-background.png);
+    background-image: url(../../../queen-clubs-background.png);
 }
 
 .thirteen-hearts {
-    background-image: url(../../../public/king-hearts-background.png);
+    background-image: url(../../../king-hearts-background.png);
 }
 .thirteen-diamonds {
-    background-image: url(../../../public/king-diamonds-background.png);
+    background-image: url(../../../king-diamonds-background.png);
 }
 .thirteen-spades {
-    background-image: url(../../../public/king-spades-background.png);
+    background-image: url(../../../king-spades-background.png);
 }
 .thirteen-clubs {
-    background-image: url(../../../public/king-clubs-background.png);
+    background-image: url(../../../king-clubs-background.png);
 }

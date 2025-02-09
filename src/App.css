@@ -13,6 +13,12 @@
   font-family: "Gothic A1", serif;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 #table {
   min-height: 100vh;
   display: flex;
@@ -23,18 +29,99 @@
 
 .adversary-side {
   width: 100%;
-  border: 1px solid red;
   flex: 0.5;
 }
 
 .main-side {
   width: 100%;
-  border: 1px solid red;
   flex: 1;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+}
+
+.trash {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-50px);
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.26));
+  scale: 0.9;
+}
+
+.trash>li:nth-child(1)>.card {
+  transform: perspective(500px) rotateX(20deg) rotate(15deg) translate(-40%, -75%);
+  transform-origin: center;
+}
+
+.trash>li:nth-child(2)>.card {
+  transform: perspective(500px) rotateX(20deg) rotate(-30deg) translate(20%, -70%);
+  transform-origin: center;
+}
+
+.trash>li:nth-child(3)>.card {
+  transform: perspective(500px) rotateX(20deg) rotate(40deg) translate(-40%, -65%);
+  transform-origin: center;
+}
+
+.trash>li:nth-child(4)>.card {
+  transform: perspective(500px) rotateX(20deg) translate(-10%, -60%);
+  transform-origin: center;
+}
+
+.trash>li:nth-child(4)>.card:hover {
+  transform: perspective(800px) rotateX(20deg) rotateZ(-8deg) translate(-10%, -50%) scale(1.05);
+}
+
+
+.draw-pile {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-100px);
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.26));
+}
+
+
+.draw-pile>li:nth-child(1)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(-2deg)  translate(-4%,-80%);
+  transform-origin: center;
+}
+
+.draw-pile>li:nth-child(2)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(0deg) translate(-4%,-80%);
+  transform-origin: center;
+}
+
+.draw-pile>li:nth-child(3)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(2deg)  translate(-4%,-79%);
+  transform-origin: center;
+}
+
+.draw-pile>li:nth-child(4)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(4deg) translate(-4%,-79%);
+  transform-origin: center;
+}
+.draw-pile>li:nth-child(5)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(6deg) translate(-4%,-79%);
+  transform-origin: center;
+}
+.draw-pile>li:nth-child(6)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(8deg) translate(-4%,-78%);
+  transform-origin: center;
+}
+.draw-pile>li:nth-child(7)>.card {
+  transform: perspective(500px) rotateX(35deg) rotate(10deg) translate(-2%,-78%);
+  transform-origin: center;
+}
+
+.draw-pile>li:nth-child(7)>.card:hover {
+  transform: perspective(900px) rotateX(40deg) rotateZ(8deg) rotate(10deg) translate(-2%,-68%) scale(1.05);
 }
 
 .my-side {
   flex: 0.5;
   width: 100%;
-  border: 1px solid red;
 }

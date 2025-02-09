@@ -1,21 +1,52 @@
+import "./Hand.css";
+import { ICard } from '../../types/Card';
 import Card from '../Card/Card';
 
-import "./Hand.css";
+type HandProps = {
+  cards: ICard[]
+  isAdversaryHand: boolean
+}
 
-type Props = {}
+const Hand = ({ cards, isAdversaryHand }: HandProps) => {
 
-const Hand = (props: Props) => {
+  const visibleSide = isAdversaryHand ? "back" : "front";
+
   return (
-    <ul className='hand'>
-        <li><Card naipe={'hearts'} number={1}/></li>
-        <li><Card naipe={'hearts'} number={2}/></li>
-        <li><Card naipe={'hearts'} number={3}/></li>
-        <li><Card naipe={'hearts'} number={4}/></li>
-        <li><Card naipe={'hearts'} number={5}/></li>
-        <li><Card naipe={'hearts'} number={6}/></li>
-        <li><Card naipe={'hearts'} number={7}/></li>
-        <li><Card naipe={'hearts'} number={8}/></li>
-        <li><Card naipe={'hearts'} number={9}/></li>
+    <ul className={`hand ${isAdversaryHand ? "hand-adversary" : ''}`}>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+      <li >
+        <Card naipe={"diamonds"} number={3} visibleSide={visibleSide} />
+      </li>
+
+
+      {/* {cards.length > 0 && cards.map((card:ICard) => (
+        <li key={card.id}>
+          <Card naipe={card.naipe} number={card.number} />
+        </li>
+      ))} */}
     </ul>
   )
 }
