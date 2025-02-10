@@ -3,6 +3,7 @@
     rotate: 1deg;
     margin: 0 auto;
     position: relative;
+    z-index: 4;
 }
 
 .hand:not(.hand-adversary) {

@@ -72,56 +72,131 @@ ul {
 }
 
 .trash>li:nth-child(4)>.card:hover {
-  transform: perspective(800px) rotateX(20deg) rotateZ(-8deg) translate(-10%, -50%) scale(1.05);
+  transform: perspective(800px) rotateX(25deg) rotateZ(-8deg) translate(-10%, -50%) scale(1.05);
 }
-
 
 .draw-pile {
   position: relative;
   display: block;
   margin: 0 auto;
+  z-index: 5;
   transform: translateX(-100px);
-  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.26));
 }
 
+.draw-pile>li>.card {
+  box-shadow: 5px 8px 20px 0px rgba(0, 0, 0, 0.144);  
+}
 
 .draw-pile>li:nth-child(1)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(-2deg)  translate(-4%,-80%);
+  --animation-duration: 0.1s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(182deg) translate(-4%, -80%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
 
 .draw-pile>li:nth-child(2)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(0deg) translate(-4%,-80%);
+  --animation-duration: 0.2s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(180deg) translate(-4%, -80%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
 
 .draw-pile>li:nth-child(3)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(2deg)  translate(-4%,-79%);
+  --animation-duration: 0.3s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(178deg) translate(-4%, -79%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
 
 .draw-pile>li:nth-child(4)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(4deg) translate(-4%,-79%);
+  --animation-duration: 0.4s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(176deg) translate(-4%, -79%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
+
 .draw-pile>li:nth-child(5)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(6deg) translate(-4%,-79%);
+  --animation-duration: 0.5s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(174deg) translate(-4%, -79%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
+
 .draw-pile>li:nth-child(6)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(8deg) translate(-4%,-78%);
+  --animation-duration: 0.6s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(172deg) translate(-4%, -78%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
+
 .draw-pile>li:nth-child(7)>.card {
-  transform: perspective(500px) rotateX(35deg) rotate(10deg) translate(-2%,-78%);
+  --animation-duration: 0.7s;
+  --transform-base: perspective(500px) rotateX(205deg) rotate(170deg) translate(-2%, -78%);
+
+  transform: var(--transform-base);
   transform-origin: center;
 }
 
 .draw-pile>li:nth-child(7)>.card:hover {
-  transform: perspective(900px) rotateX(40deg) rotateZ(8deg) rotate(10deg) translate(-2%,-68%) scale(1.05);
+  transform:  perspective(500px) rotateX(210deg) rotate(162deg) translate(-2%, -68%) scale(1.05);
+}
+
+.draw-pile.drawing>li:nth-child(7)>.card {
+  pointer-events: none;
+  animation: drawing 2s ease-out alternate, increasePile var(--animation-duration) linear 2s forwards;
+}
+
+.draw-pile.drawing>li:nth-child(-n+6)>.card {
+  pointer-events: none;
+  animation: increasePile var(--animation-duration) linear 2s forwards;
 }
 
 .my-side {
   flex: 0.5;
   width: 100%;
+}
+
+@keyframes drawing {
+  0% {
+    opacity: 1;
+    transform: perspective(500px) rotateX(210deg) rotate(162deg) translate(-2%, -68%) scale(1.05);
+  }
+
+  50% {
+    opacity: 1;
+    transform: perspective(500px) rotateX(362deg) rotate(162deg) rotateZ(40deg) translate(-2%, 25%) scale(1);
+    box-shadow: 0px 0px 4px 0px #00000050;
+  }
+
+  90% {
+    opacity: 1;
+    box-shadow: 0px 0px 4px 0px #00000050;
+    transform: perspective(500px) rotateX(362deg) rotate(162deg) rotateZ(40deg) translate(40%, -84%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    box-shadow: 0px 0px 4px 0px #00000050;
+    transform: perspective(500px) rotateX(362deg) rotate(162deg) rotateZ(40deg) translate(40%, -84%) scale(1);
+  }
+}
+
+@keyframes increasePile {
+  0% {
+    transform: var(--transform-base) scale(1);
+  }
+
+  20% {
+    transform: var(--transform-base) scale(1.1);
+  }
+
+  100% {
+    transform: var(--transform-base) scale(1);
+  }
 }
