@@ -65,5 +65,5 @@
 }
 
 .hand>li:nth-child(10)>.card {
-    transform: rotate(200deg) translate(-212%, 71%);
+    transform: rotate(200deg) translate(-215%, 71%);
 }
