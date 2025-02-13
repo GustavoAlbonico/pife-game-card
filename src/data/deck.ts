@@ -1,267 +1,267 @@
-import { ICard } from "../types/Card";
+import { ICard } from "../types/card";
 
 export const deck:ICard[] = [
     {
         id: 1,
-        naipe: "hearts",
+        suit: "hearts",
         number: 1
     },
     {
         id: 2,
-        naipe: "hearts",
+        suit: "hearts",
         number: 2
     },
     {
         id: 3,
-        naipe: "hearts",
+        suit: "hearts",
         number: 3
     },
     {
         id: 4,
-        naipe: "hearts",
+        suit: "hearts",
         number: 4
     },
     {
         id: 5,
-        naipe: "hearts",
+        suit: "hearts",
         number: 5
     },
     {
         id: 6,
-        naipe: "hearts",
+        suit: "hearts",
         number: 6
     },
     {
         id: 7,
-        naipe: "hearts",
+        suit: "hearts",
         number: 7
     },
     {
         id: 8,
-        naipe: "hearts",
+        suit: "hearts",
         number: 8
     },
     {
         id: 9,
-        naipe: "hearts",
+        suit: "hearts",
         number: 9
     },
     {
         id: 10,
-        naipe: "hearts",
+        suit: "hearts",
         number: 10
     },
     {
         id: 11,
-        naipe: "hearts",
+        suit: "hearts",
         number: 11
     },
     {
         id: 12,
-        naipe: "hearts",
+        suit: "hearts",
         number: 12
     },
     {
         id: 13,
-        naipe: "hearts",
+        suit: "hearts",
         number: 13
     },
  // ---------------------------------//
     {
         id: 14,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 1
     },
     {
         id: 15,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 2
     },
     {
         id: 16,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 3
     },
     {
         id: 17,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 4
     },
     {
         id: 18,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 5
     },
     {
         id: 19,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 6
     },
     {
         id: 20,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 7
     },
     {
         id: 21,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 8
     },
     {
         id: 22,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 9
     },
     {
         id: 23,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 10
     },
     {
         id: 24,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 11
     },
     {
         id: 25,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 12
     },
     {
         id: 26,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 13
     },
     // ---------------------------------//
     {
         id: 27,
-        naipe: "clubs",
+        suit: "clubs",
         number: 1
     },
     {
         id: 28,
-        naipe: "clubs",
+        suit: "clubs",
         number: 2
     },
     {
         id: 29,
-        naipe: "clubs",
+        suit: "clubs",
         number: 3
     },
     {
         id: 30,
-        naipe: "clubs",
+        suit: "clubs",
         number: 4
     },
     {
         id: 31,
-        naipe: "clubs",
+        suit: "clubs",
         number: 5
     },
     {
         id: 32,
-        naipe: "clubs",
+        suit: "clubs",
         number: 6
     },
     {
         id: 33,
-        naipe: "clubs",
+        suit: "clubs",
         number: 7
     },
     {
         id: 34,
-        naipe: "clubs",
+        suit: "clubs",
         number: 8
     },
     {
         id: 35,
-        naipe: "clubs",
+        suit: "clubs",
         number: 9
     },
     {
         id: 36,
-        naipe: "clubs",
+        suit: "clubs",
         number: 10
     },
     {
         id: 37,
-        naipe: "clubs",
+        suit: "clubs",
         number: 11
     },
     {
         id: 38,
-        naipe: "clubs",
+        suit: "clubs",
         number: 12
     },
     {
         id: 39,
-        naipe: "clubs",
+        suit: "clubs",
         number: 13
     },
     // ---------------------------------------//
     {
         id: 40,
-        naipe: "spades",
+        suit: "spades",
         number: 1
     },
     {
         id: 41,
-        naipe: "spades",
+        suit: "spades",
         number: 2
     },
     {
         id: 42,
-        naipe: "spades",
+        suit: "spades",
         number: 3
     },
     {
         id: 43,
-        naipe: "spades",
+        suit: "spades",
         number: 4
     },
     {
         id: 44,
-        naipe: "spades",
+        suit: "spades",
         number: 5
     },
     {
         id: 45,
-        naipe: "spades",
+        suit: "spades",
         number: 6
     },
     {
         id: 46,
-        naipe: "spades",
+        suit: "spades",
         number: 7
     },
     {
         id: 47,
-        naipe: "spades",
+        suit: "spades",
         number: 8
     },
     {
         id: 48,
-        naipe: "spades",
+        suit: "spades",
         number: 9
     },
     {
         id: 49,
-        naipe: "spades",
+        suit: "spades",
         number: 10
     },
     {
         id: 50,
-        naipe: "spades",
+        suit: "spades",
         number: 11
     },
     {
         id: 51,
-        naipe: "spades",
+        suit: "spades",
         number: 12
     },
     {
         id: 52,
-        naipe: "spades",
+        suit: "spades",
         number: 13
     },
 
@@ -269,265 +269,265 @@ export const deck:ICard[] = [
 
     {
         id: 53,
-        naipe: "hearts",
+        suit: "hearts",
         number: 1
     },
     {
         id: 54,
-        naipe: "hearts",
+        suit: "hearts",
         number: 2
     },
     {
         id: 55,
-        naipe: "hearts",
+        suit: "hearts",
         number: 3
     },
     {
         id: 56,
-        naipe: "hearts",
+        suit: "hearts",
         number: 4
     },
     {
         id: 57,
-        naipe: "hearts",
+        suit: "hearts",
         number: 5
     },
     {
         id: 58,
-        naipe: "hearts",
+        suit: "hearts",
         number: 6
     },
     {
         id: 59,
-        naipe: "hearts",
+        suit: "hearts",
         number: 7
     },
     {
         id: 60,
-        naipe: "hearts",
+        suit: "hearts",
         number: 8
     },
     {
         id: 61,
-        naipe: "hearts",
+        suit: "hearts",
         number: 9
     },
     {
         id: 62,
-        naipe: "hearts",
+        suit: "hearts",
         number: 10
     },
     {
         id: 63,
-        naipe: "hearts",
+        suit: "hearts",
         number: 11
     },
     {
         id: 64,
-        naipe: "hearts",
+        suit: "hearts",
         number: 12
     },
     {
         id: 65,
-        naipe: "hearts",
+        suit: "hearts",
         number: 13
     },
  // ---------------------------------//
     {
         id: 66,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 1
     },
     {
         id: 67,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 2
     },
     {
         id: 68,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 3
     },
     {
         id: 69,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 4
     },
     {
         id: 70,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 5
     },
     {
         id: 71,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 6
     },
     {
         id: 72,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 7
     },
     {
         id: 73,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 8
     },
     {
         id: 74,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 9
     },
     {
         id: 75,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 10
     },
     {
         id: 76,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 11
     },
     {
         id: 77,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 12
     },
     {
         id: 78,
-        naipe: "diamonds",
+        suit: "diamonds",
         number: 13
     },
     // ---------------------------------//
     {
         id: 79,
-        naipe: "clubs",
+        suit: "clubs",
         number: 1
     },
     {
         id: 80,
-        naipe: "clubs",
+        suit: "clubs",
         number: 2
     },
     {
         id: 81,
-        naipe: "clubs",
+        suit: "clubs",
         number: 3
     },
     {
         id: 82,
-        naipe: "clubs",
+        suit: "clubs",
         number: 4
     },
     {
         id: 823,
-        naipe: "clubs",
+        suit: "clubs",
         number: 5
     },
     {
         id: 84,
-        naipe: "clubs",
+        suit: "clubs",
         number: 6
     },
     {
         id: 85,
-        naipe: "clubs",
+        suit: "clubs",
         number: 7
     },
     {
         id: 86,
-        naipe: "clubs",
+        suit: "clubs",
         number: 8
     },
     {
         id: 87,
-        naipe: "clubs",
+        suit: "clubs",
         number: 9
     },
     {
         id: 88,
-        naipe: "clubs",
+        suit: "clubs",
         number: 10
     },
     {
         id: 89,
-        naipe: "clubs",
+        suit: "clubs",
         number: 11
     },
     {
         id: 90,
-        naipe: "clubs",
+        suit: "clubs",
         number: 12
     },
     {
         id: 91,
-        naipe: "clubs",
+        suit: "clubs",
         number: 13
     },
     // ---------------------------------------//
     {
         id: 92,
-        naipe: "spades",
+        suit: "spades",
         number: 1
     },
     {
         id: 93,
-        naipe: "spades",
+        suit: "spades",
         number: 2
     },
     {
         id: 94,
-        naipe: "spades",
+        suit: "spades",
         number: 3
     },
     {
         id: 95,
-        naipe: "spades",
+        suit: "spades",
         number: 4
     },
     {
         id: 96,
-        naipe: "spades",
+        suit: "spades",
         number: 5
     },
     {
         id: 97,
-        naipe: "spades",
+        suit: "spades",
         number: 6
     },
     {
         id: 98,
-        naipe: "spades",
+        suit: "spades",
         number: 7
     },
     {
         id: 99,
-        naipe: "spades",
+        suit: "spades",
         number: 8
     },
     {
         id: 100,
-        naipe: "spades",
+        suit: "spades",
         number: 9
     },
     {
         id: 101,
-        naipe: "spades",
+        suit: "spades",
         number: 10
     },
     {
         id: 102,
-        naipe: "spades",
+        suit: "spades",
         number: 11
     },
     {
         id: 103,
-        naipe: "spades",
+        suit: "spades",
         number: 12
     },
     {
         id: 104,
-        naipe: "spades",
+        suit: "spades",
         number: 13
     },
 ]

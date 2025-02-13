@@ -1,15 +1,15 @@
 
-import { CardNaipes, CardNumbers } from "../../types/Card";
+import { CardSuits, CardNumbers } from "../../types/card";
 import CardSymbol from "../CardSymbol/CardSymbol";
 import "./Card.css";
 
 type CardProps = {
-    naipe?: CardNaipes,
+    suit?: CardSuits,
     number?: CardNumbers,
     visibleSide: "front" | "back",
 
 }
-const Card = ({ naipe, number, visibleSide }: CardProps) => {
+const Card = ({ suit, number, visibleSide }: CardProps) => {
 
     const numberToRepresentationCardNumber = (number: number): string | number => {
 
@@ -61,8 +61,8 @@ const Card = ({ naipe, number, visibleSide }: CardProps) => {
         }
     }
 
-    const findColor = (naipe: string): string => {
-        switch (naipe) {
+    const findColor = (suit: string): string => {
+        switch (suit) {
             case "hearts":
                 return "#FF1703";
             case "diamonds":
@@ -79,39 +79,39 @@ const Card = ({ naipe, number, visibleSide }: CardProps) => {
     return (
         <div className={`card ${visibleSide === "back" ? "card-visible-back-side" : ''}`}>
 
-            {number && naipe && visibleSide === "front" &&  <>
+            {number && suit && visibleSide === "front" &&  <>
                 <div className="card-left">
                     <span
                         className="card-number"
                         style={{
-                            color: findColor(naipe),
+                            color: findColor(suit),
                             letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
                             textAlign: (number === 10 ? "left" : "center"),
                         }}
                     >
                         {numberToRepresentationCardNumber(number)}
                     </span>
-                    <CardSymbol naipe={naipe} />
+                    <CardSymbol suit={suit} />
                 </div>
                 <div className="card-middle">
-                    <div className={`card-middle-content ${numberToString(number)}-${naipe}`}>
+                    <div className={`card-middle-content ${numberToString(number)}-${suit}`}>
                         <div className={`card-middle-content-left-${numberToString(number)}`}>
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
                         </div>
                         <div className={`card-middle-content-center-${numberToString(number)}`}>
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
                         </div>
                         <div className={`card-middle-content-right-${numberToString(number)}`}>
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
-                            <CardSymbol naipe={naipe} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
+                            <CardSymbol suit={suit} />
                         </div>
                     </div>
                 </div>
@@ -119,14 +119,14 @@ const Card = ({ naipe, number, visibleSide }: CardProps) => {
                     <span
                         className="card-number"
                         style={{
-                            color: findColor(naipe),
+                            color: findColor(suit),
                             letterSpacing: (number === 10 ? "-5px" : number === 9 ? "-2px" : "0px"),
                             textAlign: (number === 10 ? "left" : "center"),
                         }}
                     >
                         {numberToRepresentationCardNumber(number)}
                     </span>
-                    <CardSymbol naipe={naipe} />
+                    <CardSymbol suit={suit} />
                 </div>
             </>}
             

@@ -1,15 +1,15 @@
 import "./CardSymbol.css";
 
 type CardSymbolProps = {
-    naipe: "hearts" | "diamonds" | "clubs" | "spades",
+    suit: "hearts" | "diamonds" | "clubs" | "spades",
 }
 
 const CardSymbol = ({
-    naipe,
+    suit,
 }: CardSymbolProps) => {
 
     return (
-        <div className={`card-symbol ${naipe}`}>
+        <div className={`card-symbol ${suit}`}>
         </div>
     )
 }

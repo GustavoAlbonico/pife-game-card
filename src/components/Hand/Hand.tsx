@@ -1,5 +1,5 @@
 import "./Hand.css";
-import { ICard } from '../../types/Card';
+import { ICard } from '../../types/card';
 import Card from '../Card/Card';
 import { useEffect } from "react";
 
@@ -18,41 +18,9 @@ const Hand = ({ cards, isAdversaryHand }: HandProps) => {
 
   return (
     <ul className={`hand ${isAdversaryHand ? "hand-adversary" : ''}`}>
-      {/* <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li>
-      <li >
-        <Card naipe={"spades"} number={12} visibleSide={visibleSide} />
-      </li> */}
-
-
       {cards.length > 0 && cards.map((card:ICard) => (
         <li key={card.id}>
-          <Card naipe={card.naipe} number={card.number} visibleSide={visibleSide} />
+          <Card suit={card.suit} number={card.number} visibleSide={visibleSide} />
         </li>
       ))}
     </ul>

@@ -1,65 +1,116 @@
-import { useState } from 'react';
+import {useState } from 'react';
 import './App.css';
 import Card from './components/Card/Card';
 import Hand from './components/Hand/Hand';
-import { CardNaipes, CardNumbers, ICard } from './types/Card';
+import { CardSuits, CardNumbers, ICard } from './types/card';
+import { useGame } from './hook/useGame';
+
 
 function App() {
 
   const [draw, setDraw] = useState<boolean>(false);
   const [drawCardVisibleSide, setDrawCardVisibleSide] = useState<"front" | "back">("back");
   const [drawCardNumber, setDrawCardNumber] = useState<CardNumbers>();
-  const [drawCardNaipe, setDrawCardNaipe] = useState<CardNaipes>();
+  const [drawCardSuit, setDrawCardSuit] = useState<CardSuits>();
 
   const cardsInicial: ICard[] = [
     {
       id: 1,
-      naipe: "hearts",
+      suit: "hearts",
       number: 1
     },
     {
       id: 2,
-      naipe: "hearts",
+      suit: "hearts",
       number: 2
     },
     {
       id: 3,
-      naipe: "hearts",
+      suit: "hearts",
       number: 3
     },
     {
       id: 4,
-      naipe: "hearts",
+      suit: "hearts",
       number: 4
     },
     {
       id: 5,
-      naipe: "hearts",
+      suit: "hearts",
       number: 5
     },
     {
       id: 6,
-      naipe: "hearts",
+      suit: "hearts",
       number: 6
     },
     {
       id: 7,
-      naipe: "hearts",
+      suit: "hearts",
       number: 7
     },
     {
       id: 8,
-      naipe: "hearts",
+      suit: "hearts",
       number: 8
     },
     {
       id: 9,
-      naipe: "hearts",
+      suit: "hearts",
+      number: 9
+    },
+  ]
+
+  const cardsInicial2: ICard[] = [
+    {
+      id: 1,
+      suit: "hearts",
+      number: 1
+    },
+    {
+      id: 2,
+      suit: "hearts",
+      number: 2
+    },
+    {
+      id: 3,
+      suit: "hearts",
+      number: 3
+    },
+    {
+      id: 4,
+      suit: "hearts",
+      number: 4
+    },
+    {
+      id: 5,
+      suit: "hearts",
+      number: 5
+    },
+    {
+      id: 6,
+      suit: "hearts",
+      number: 6
+    },
+    {
+      id: 7,
+      suit: "hearts",
+      number: 7
+    },
+    {
+      id: 8,
+      suit: "hearts",
+      number: 8
+    },
+    {
+      id: 9,
+      suit: "hearts",
       number: 9
     },
   ]
 
   const [cards, setCards] = useState<ICard[]>(cardsInicial);
+  const [cards2, setCards2] = useState<ICard[]>(cardsInicial2);
 
 
 
@@ -71,19 +122,19 @@ function App() {
     setTimeout(() => {
       setDrawCardVisibleSide("front");
       setDrawCardNumber(12);
-      setDrawCardNaipe("spades");
+      setDrawCardSuit("spades");
     }, 300);
 
     setTimeout(() => {
       setCards((cards) =>
-        [...cards, { id: 515, naipe: "spades", number: 12 }]
+        [...cards, { id: 515, suit: "spades", number: 12 }]
       );
     }, 1400);
 
     setTimeout(() => {
       setDrawCardVisibleSide("back");
       setDrawCardNumber(undefined);
-      setDrawCardNaipe(undefined);
+      setDrawCardSuit(undefined);
 
     }, 1900);
 
@@ -92,23 +143,23 @@ function App() {
     }, 2700);
   }
 
-
+  const { state , dispatch} = useGame();
 
   return (
     <>
       <main id="table">
 
         <section className="adversary-side">
-          <Hand cards={[]} isAdversaryHand />
+          <Hand cards={state.players[1].cards} isAdversaryHand />
         </section>
 
         <section className="main-side">
           <ul className="trash">
 
-            <li><Card number={3} naipe="spades" visibleSide={'front'} /></li>
-            <li><Card number={3} naipe="diamonds" visibleSide={'front'} /></li>
-            <li><Card number={3} naipe="hearts" visibleSide={'front'} /></li>
-            <li><Card number={3} naipe="clubs" visibleSide={'front'} /></li>
+            <li><Card number={3} suit="spades" visibleSide={'front'} /></li>
+            <li><Card number={3} suit="diamonds" visibleSide={'front'} /></li>
+            <li><Card number={3} suit="hearts" visibleSide={'front'} /></li>
+            <li><Card number={3} suit="clubs" visibleSide={'front'} /></li>
 
           </ul>
           <ul className={`draw-pile ${draw ? 'drawing' : ''}`}>
@@ -121,14 +172,14 @@ function App() {
             <li><Card visibleSide={'back'} /></li>
 
             <li onClick={drawCard}>
-              <Card visibleSide={drawCardVisibleSide} number={drawCardNumber} naipe={drawCardNaipe} />
+              <Card visibleSide={drawCardVisibleSide} number={drawCardNumber} suit={drawCardSuit} />
             </li>
 
           </ul>
         </section>
 
         <section className="my-side">
-          <Hand cards={cards} isAdversaryHand={false} />
+          <Hand cards={state.players[0].cards} isAdversaryHand={false} />
         </section>
 
       </main>
