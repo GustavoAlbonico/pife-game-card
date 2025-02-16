@@ -1,11 +1,14 @@
 import { ICard } from "./card";
+import { IDrawCard } from "./drawCard";
 import { IPlayer } from "./player";
 
 export interface IGame {
-    player:IPlayer
-    players:IPlayer[],
+    mainPlayer:IPlayer
+    adversaryPlayer:IPlayer,
     deck:ICard[],
-    turn: number,
-    trash?:ICard[],
-    result?:IPlayer[]
+    trash:ICard[],
+    cardsToChange:ICard[]
+    drawCard?:IDrawCard,
+    turn?: IPlayer,
+    result?:IPlayer[],
 }

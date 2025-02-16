@@ -11,7 +11,11 @@
 }
 
 .hand:not(.hand-adversary) > li > .card:hover {
-    top: -50px;
+    top: -30px;
+}
+
+.hand:not(.hand-adversary) > li.selected > .card {
+    top: -30px;
 }
 
 .hand-adversary {
@@ -22,48 +26,58 @@
 
 .hand-adversary > li > .card {
     cursor: default;
-}
 
-.hand-adversary > li > .card:hover {
-    top:-5px
+    &:hover {
+        top:-5px
+    }
 }
 
 .hand>li:nth-child(1)>.card {
     transform: rotate(155deg) translate(-5%, 25%);
+    z-index: 1;
 }
 
 .hand>li:nth-child(2)>.card {
     transform: rotate(160deg) translate(-30%, 25%);
+    z-index: 2;
 }
 
 .hand>li:nth-child(3)>.card {
     transform: rotate(165deg) translate(-55%, 25%);
+    z-index: 3;
 }
 
 .hand>li:nth-child(4)>.card {
     transform: rotate(170deg) translate(-80%, 28%);
+    z-index: 4;
 }
 
 .hand>li:nth-child(5)>.card {
     transform: rotate(175deg) translate(-105%, 32%);
+    z-index: 5;
 }
 
 .hand>li:nth-child(6)>.card {
     transform: rotate(181deg) translate(-126%, 38%);
+    z-index: 6;
 }
 
 .hand>li:nth-child(7)>.card {
     transform: rotate(185deg) translate(-152%, 43%);
+    z-index: 7;
 }
 
 .hand>li:nth-child(8)>.card {
     transform: rotate(190deg) translate(-175%, 51%);
+    z-index: 8;
 }
 
 .hand>li:nth-child(9)>.card {
     transform: rotate(195deg) translate(-195%, 61%);
+    z-index: 9;
 }
 
 .hand>li:nth-child(10)>.card {
     transform: rotate(200deg) translate(-215%, 71%);
+    z-index: 10;
 }

@@ -1,12 +1,12 @@
 
-import { CardSuits, CardNumbers } from "../../types/card";
+import { CardSuits, CardNumbers, CardVisibleSide } from "../../types/card";
 import CardSymbol from "../CardSymbol/CardSymbol";
 import "./Card.css";
 
 type CardProps = {
     suit?: CardSuits,
     number?: CardNumbers,
-    visibleSide: "front" | "back",
+    visibleSide: CardVisibleSide,
 
 }
 const Card = ({ suit, number, visibleSide }: CardProps) => {
