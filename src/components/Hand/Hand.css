@@ -33,51 +33,156 @@
 }
 
 .hand>li:nth-child(1)>.card {
-    transform: rotate(155deg) translate(-5%, 25%);
-    z-index: 1;
+    --transformChangingCardZero: rotate(155deg) translate(-5%, 25%);
+    --transformChangingCardThirty: rotate(155deg) translate(-5%, 125%);
+    --zIndexChangingCardFrom: 1;
+
+    --transformDiscartCard: rotate(155deg) translate(-5%, 45%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(2)>.card {
-    transform: rotate(160deg) translate(-30%, 25%);
-    z-index: 2;
+    --transformChangingCardZero: rotate(160deg) translate(-30%, 25%);
+    --transformChangingCardThirty: rotate(160deg) translate(-30%, 125%); 
+    --zIndexChangingCardFrom: 2;
+
+    --transformDiscartCard: rotate(160deg) translate(-30%, 45%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(3)>.card {
-    transform: rotate(165deg) translate(-55%, 25%);
-    z-index: 3;
+    --transformChangingCardZero: rotate(165deg) translate(-55%, 25%);
+    --transformChangingCardThirty: rotate(165deg) translate(-55%, 125%);
+    --zIndexChangingCardFrom: 3;
+
+    --transformDiscartCard: rotate(165deg) translate(-55%, 45%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(4)>.card {
-    transform: rotate(170deg) translate(-80%, 28%);
-    z-index: 4;
+    --transformChangingCardZero: rotate(170deg) translate(-80%, 28%);
+    --transformChangingCardThirty: rotate(170deg) translate(-80%, 128%);
+    --zIndexChangingCardFrom: 4;
+
+    --transformDiscartCard: rotate(170deg) translate(-80%, 48%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(5)>.card {
-    transform: rotate(175deg) translate(-105%, 32%);
-    z-index: 5;
+    --transformChangingCardZero: rotate(175deg) translate(-105%, 32%);
+    --transformChangingCardThirty: rotate(175deg) translate(-105%, 132%);
+    --zIndexChangingCardFrom: 5;
+
+    --transformDiscartCard: rotate(175deg) translate(-105%, 52%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(6)>.card {
-    transform: rotate(181deg) translate(-126%, 38%);
-    z-index: 6;
+    --transformChangingCardZero:rotate(181deg) translate(-126%, 38%);
+    --transformChangingCardThirty: rotate(181deg) translate(-126%, 138%);
+    --zIndexChangingCardFrom: 6;
+
+    --transformDiscartCard: rotate(181deg) translate(-126%, 58%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(7)>.card {
-    transform: rotate(185deg) translate(-152%, 43%);
-    z-index: 7;
+    --transformChangingCardZero: rotate(185deg) translate(-152%, 43%);
+    --transformChangingCardThirty: rotate(185deg) translate(-152%, 143%);
+    --zIndexChangingCardFrom: 7;
+
+    --transformDiscartCard: rotate(185deg) translate(-152%, 63%) perspective(500px) rotateX(-40deg) scale(0.95);
+    
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(8)>.card {
-    transform: rotate(190deg) translate(-175%, 51%);
-    z-index: 8;
+    --transformChangingCardZero: rotate(190deg) translate(-175%, 51%);
+    --transformChangingCardThirty: rotate(190deg) translate(-175%, 151%);
+    --zIndexChangingCardFrom: 8;
+
+    --transformDiscartCard: rotate(190deg) translate(-175%, 71%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(9)>.card {
-    transform: rotate(195deg) translate(-195%, 61%);
-    z-index: 9;
+    --transformChangingCardZero: rotate(195deg) translate(-195%, 61%);
+    --transformChangingCardThirty: rotate(195deg) translate(-195%, 161%);
+    --zIndexChangingCardFrom: 9;
+
+    --transformDiscartCard: rotate(190deg) translate(-195%, 81%) perspective(500px) rotateX(-40deg) scale(0.95);
+    --transformDiscartingCard: rotate(0deg) rotateY(-4deg) translate(-126%, -128%) perspective(500px) rotateX(30deg) scale(0.81);
+
+    transform: var(--transformChangingCardZero);
+
+    z-index: var(--zIndexChangingCardFrom);
 }
 
 .hand>li:nth-child(10)>.card {
-    transform: rotate(200deg) translate(-215%, 71%);
-    z-index: 10;
+    --transformChangingCardZero: rotate(200deg) translate(-215%, 71%);
+    --transformChangingCardThirty: rotate(200deg) translate(-215%, 171%);
+    --zIndexChangingCardFrom: 10;
+
+    --transformDiscartCard: rotate(200deg) translate(-215%, 91%) perspective(500px) rotateX(-40deg) scale(0.95);
+
+    transform: var(--transformChangingCardZero);
+    z-index: var(--zIndexChangingCardFrom);
+}
+
+.hand:not(.hand-adversary).discart > li > .card:hover {
+    transform: var(--transformDiscartCard);
+}
+
+@keyframes discarting-card {
+
+   from {
+        transform: var(--transformDiscartCard);
+        top: -30px;
+    }
+
+    to {
+        transform: var(--transformDiscartingCard);
+    }
+}
+
+@keyframes changing-card {
+    0% {
+        transform: var(--transformChangingCardZero);
+        z-index: var(--zIndexChangingCardFrom);
+        top: -30px;
+    }
+
+    30% {
+        transform: var(--transformChangingCardThirty);
+        z-index: var(--zIndexChangingCardFrom);
+        top: -30px;
+    }
+
+    60% {
+        transform: var(--transformChangingCardSixty);
+        z-index: var(--zIndexChangingCardTo);
+        top: -30px;
+    }
+    
+    100% {
+        transform: var(--transformChangingCardThousand);
+        z-index: var(--zIndexChangingCardTo);
+        top: 0px;
+    }
 }

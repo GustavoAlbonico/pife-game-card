@@ -6,7 +6,7 @@ import { IPlayer } from "../types/player";
 
 type GameAction =
     { type: "START" } |
-    { type: "DISCART" } |
+    { type: "DISCART" , card:ICard } |
     { type: "RESULT" } |
     { type: "DRAW_CARD" } |
     { type: "ADD_CARD_TO_HAND" } |
@@ -37,7 +37,8 @@ const startGame: IGame = {
     },
     deck: deck,
     trash: [],
-    cardsToChange: []
+    cardsToChange: [],
+    isDiscartAction: false
 }
 
 const shuffleDeck = (deck: ICard[]): ICard[] => {
@@ -93,6 +94,7 @@ const gameReducer = (state: IGame, action: GameAction): IGame => {
                     },
                     type: "main",
                 },
+                isDiscartAction: true,
             };
 
         case "ADD_CARD_TO_HAND":
@@ -154,7 +156,21 @@ const gameReducer = (state: IGame, action: GameAction): IGame => {
             };
 
         case "DISCART":
-            return state;
+
+            const mainPlayerUpdateHand = state.mainPlayer.hand.filter(cardHand => cardHand.id !== action.card.id);
+
+            return {
+                ...state,
+                isDiscartAction: false,
+                mainPlayer:{
+                    ...state.mainPlayer,
+                    hand: mainPlayerUpdateHand
+                },
+                trash:[
+                    ...state.trash,
+                    action.card
+                ]
+            };
         case "RESULT":
             return state;
         default:

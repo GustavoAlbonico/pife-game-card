@@ -10,7 +10,7 @@
     height: 200px;
     padding: 4px 0px;
 
-    box-shadow: 0px 0px 4px 0px #00000050;
+    box-shadow: 0px 0px 4px 1px #00000034;
     border-radius: 4px;
     background-color: #F6F6F6;
 
@@ -18,7 +18,7 @@
     grid-template-columns: 18% 64% 18%;
     grid-template-rows: auto;
 
-    transition: 0.3s ease-in-out 0.1s ;
+    transition: 0.3s ease-in-out 0.1s;
 }
 
 .card.card-visible-back-side {

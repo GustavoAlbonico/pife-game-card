@@ -80,7 +80,6 @@ ul {
   position: relative;
   display: block;
   margin: 0 auto;
-  z-index: 11;
   transform: translateX(-100px);
 }
 
@@ -148,6 +147,10 @@ ul {
   transform:  perspective(500px) rotateX(210deg) rotate(162deg) translate(-2%, -68%) scale(1.05);
 }
 
+.draw-pile.drawing {
+  z-index: 11;
+}
+
 .draw-pile.drawing>li:nth-child(7)>.card {
   pointer-events: none;
 
@@ -173,24 +176,24 @@ ul {
   50% {
     opacity: 1;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(-2%, 25%) scale(1);
-    box-shadow: 0px 0px 4px 0px #00000050;
+    box-shadow: 0px 0px 4px 1px #00000034;
   }
 
   70% {
     opacity: 1;
-    box-shadow: 0px 0px 4px 0px #00000050;
+    box-shadow: 0px 0px 4px 1px #00000034;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(0.98);
   }
 
   71% {
     opacity: 0;
-    box-shadow: 0px 0px 4px 0px #00000050;
+    box-shadow: 0px 0px 4px 1px #00000034;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(0.98);
   }
 
   100% {
     opacity: 0;
-    box-shadow: 0px 0px 4px 0px #00000050;
+    box-shadow: 0px 0px 4px 1px #00000034;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(1);
   }
 }

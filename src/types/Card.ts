@@ -6,6 +6,6 @@ export interface ICard {
     id: number
     suit: CardSuits,
     number: CardNumbers
-    visibleSide?: CardVisibleSide,
+    visibleSide: CardVisibleSide,
 }
 

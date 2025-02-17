@@ -8,6 +8,7 @@ export interface IGame {
     deck:ICard[],
     trash:ICard[],
     cardsToChange:ICard[]
+    isDiscartAction:boolean,
     drawCard?:IDrawCard,
     turn?: IPlayer,
     result?:IPlayer[],

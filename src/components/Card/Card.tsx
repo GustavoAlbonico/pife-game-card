@@ -1,4 +1,5 @@
 
+import { forwardRef} from "react";
 import { CardSuits, CardNumbers, CardVisibleSide } from "../../types/card";
 import CardSymbol from "../CardSymbol/CardSymbol";
 import "./Card.css";
@@ -9,7 +10,7 @@ type CardProps = {
     visibleSide: CardVisibleSide,
 
 }
-const Card = ({ suit, number, visibleSide }: CardProps) => {
+const Card = forwardRef<HTMLDivElement,CardProps>(({ suit, number, visibleSide }, ref) => {
 
     const numberToRepresentationCardNumber = (number: number): string | number => {
 
@@ -77,7 +78,7 @@ const Card = ({ suit, number, visibleSide }: CardProps) => {
     }
 
     return (
-        <div className={`card ${visibleSide === "back" ? "card-visible-back-side" : ''}`}>
+        <div ref={ref} className={`card ${visibleSide === "back" ? "card-visible-back-side" : ''}`}>
 
             {number && suit && visibleSide === "front" &&  <>
                 <div className="card-left">
@@ -132,6 +133,6 @@ const Card = ({ suit, number, visibleSide }: CardProps) => {
             
         </div>
     )
-}
+});
 
 export default Card;

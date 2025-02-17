@@ -3,6 +3,7 @@ import './App.css';
 import Card from './components/Card/Card';
 import Hand from './components/Hand/Hand';
 import { useGame } from './hook/useGame';
+import { ICard } from './types/card';
 
 
 function App() {
@@ -43,10 +44,13 @@ function App() {
         <section className="main-side">
           <ul className="trash">
 
-            <li><Card number={3} suit="spades" visibleSide={'front'} /></li>
-            <li><Card number={3} suit="diamonds" visibleSide={'front'} /></li>
-            <li><Card number={3} suit="hearts" visibleSide={'front'} /></li>
-            <li><Card number={3} suit="clubs" visibleSide={'front'} /></li>
+            {/* {state.trash.length > 0 && state.trash.map((card: ICard) => (
+              <li><Card number={card.number} suit={card.suit} visibleSide={card.visibleSide} /></li>
+            ))} */}
+            <li><Card number={3} suit={"spades"} visibleSide={"front"} /></li>
+            <li><Card number={3} suit={"spades"} visibleSide={"front"} /></li>
+            <li><Card number={3} suit={"spades"} visibleSide={"front"} /></li>
+            <li><Card number={8} suit="hearts" visibleSide={"front"} /></li>
 
           </ul>
           <ul className={`draw-pile ${draw ? 'drawing' : ''}`}>
