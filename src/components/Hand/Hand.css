@@ -1,13 +1,13 @@
 .hand {
-    width: 32%;
-    rotate: 1deg;
+    width: 300px;
+    rotate: 2deg;
     margin: 0 auto;
     position: relative;
     z-index: 4;
 }
 
 .hand:not(.hand-adversary) {
-    transform: perspective(500px) rotateX(-4deg);
+    transform: perspective(500px) translateX(-60px) scale(var(--scale-value));
 }
 
 .hand:not(.hand-adversary) > li > .card:hover {
@@ -19,7 +19,7 @@
 }
 
 .hand-adversary {
-    transform: translate(2%, 65px) scale(0.8) perspective(500px) rotateX(-15deg);
+    transform: translate(-45px, 11vh) scale(calc(var(--scale-value) - 0.15))  perspective(500px) rotateX(-15deg);
     transform-origin: center;
     rotate: 3deg;
 }

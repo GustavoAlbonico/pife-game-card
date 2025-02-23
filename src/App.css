@@ -1,10 +1,18 @@
+@property --scale-calc-prop {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
 :root {
   --hearts-card-color: #CE0E2C;
   --diamonds-card-color: #CE0E2C;
   --clubs-card-color: #000;
   --spades-card-color: #000;
-}
 
+  --scale-calc-prop: 0.48vw;
+  --scale-value: max(0.55, calc(1 * tan(atan2(var(--scale-calc-prop), 6.8px))));
+}
 
 * {
   margin: 0;
@@ -47,9 +55,8 @@ ul {
   position: relative;
   display: block;
   margin: 0 auto;
-  transform: translateX(-50px);
+  transform: translateX(-3.5vw) scale(calc(var(--scale-value) - 0.09));
   filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.26));
-  scale: 0.9;
 }
 
 .trash>li:nth-child(1)>.card {
@@ -80,7 +87,7 @@ ul {
   position: relative;
   display: block;
   margin: 0 auto;
-  transform: translateX(-100px);
+  transform: translateX(-8vw) scale(var(--scale-value));
 }
 
 .draw-pile>li>.card {
@@ -138,8 +145,10 @@ ul {
 .draw-pile>li:nth-child(7)>.card {
   --animation-duration: 0.7s;
   --transform-base: perspective(500px) rotateX(205deg) rotate(170deg) translate(-2%, -78%);
+  /* transform: translate(-8.4vw, 23vh) rotate(160deg) perspective(500px) rotateX(360deg) rotateZ(42deg) scale(1); */
 
   transform: var(--transform-base);
+  /* transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(0.98); */
   transform-origin: center;
 }
 
@@ -182,19 +191,19 @@ ul {
   70% {
     opacity: 1;
     box-shadow: 0px 0px 4px 1px #00000034;
-    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(0.98);
+    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(1);
   }
 
   71% {
     opacity: 0;
     box-shadow: 0px 0px 4px 1px #00000034;
-    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(0.98);
+    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(1);
   }
 
   100% {
     opacity: 0;
     box-shadow: 0px 0px 4px 1px #00000034;
-    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(42%, -85%) scale(1);
+    transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(1);
   }
 }
 
