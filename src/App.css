@@ -12,6 +12,8 @@
 
   --scale-calc-prop: 0.48vw;
   --scale-value: max(0.55, calc(1 * tan(atan2(var(--scale-calc-prop), 6.8px))));
+  --card-width: 145px;
+  --card-height: 200px;
 }
 
 * {
@@ -88,10 +90,12 @@ ul {
   display: block;
   margin: 0 auto;
   transform: translateX(-8vw) scale(var(--scale-value));
+
+  /* z-index: 20; */
 }
 
 .draw-pile>li>.card {
-  box-shadow: 5px 8px 20px 0px rgba(0, 0, 0, 0.144);  
+  box-shadow: 5px 8px 20px 0px rgba(0, 0, 0, 0.144);
 }
 
 .draw-pile>li:nth-child(1)>.card {
@@ -151,14 +155,15 @@ ul {
   /* transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(0.98); */
 
   /* transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) scale(1);
-  top: calc((65px + (10vh)) / var(--scale-value));
-  left: -113px; TESTANDO*/
+  top: calc((60px + (11vh)) /  var(--scale-value));
+  opacity: 0.5;
+  left: -88px; */
 
   transform-origin: center;
 }
 
 .draw-pile>li:nth-child(7)>.card:hover {
-  transform:  perspective(500px) rotateX(210deg) rotate(162deg) translate(-2%, -68%) scale(1.05);
+  transform: perspective(500px) rotateX(210deg) rotate(162deg) translate(-2%, -68%) scale(1.05);
 }
 
 .draw-pile.drawing {
@@ -197,7 +202,7 @@ ul {
     opacity: 1;
     box-shadow: 0px 0px 4px 1px #00000034;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) scale(1);
-    top: 145px;
+    top: calc((60px + (11vh)) / (var(--scale-value)));
     left: -113px;
   }
 
@@ -205,7 +210,7 @@ ul {
     opacity: 0;
     box-shadow: 0px 0px 4px 1px #00000034;
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) scale(1);
-    top: 145px;
+    top: calc((60px + (11vh)) / (var(--scale-value)));
     left: -113px;
   }
 
@@ -214,7 +219,7 @@ ul {
     box-shadow: 0px 0px 4px 1px #00000034;
     /* transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) translate(35%, -89%) scale(1); */
     transform: perspective(500px) rotateX(360deg) rotate(160deg) rotateZ(42deg) scale(1);
-    top: 145px;
+    top: calc((60px + (11vh)) / (var(--scale-value)));
     left: -113px;
   }
 }

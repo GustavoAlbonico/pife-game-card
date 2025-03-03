@@ -64,9 +64,9 @@ function App() {
 
             <li onClick={drawCard}>
               <Card
-                visibleSide={state.drawCard?.card.visibleSide ?? "back"}
-                number={state.drawCard?.card.number}
-                suit={state.drawCard?.card.suit}
+                visibleSide={"front"}
+                number={7}
+                suit={"diamonds"}
               />
             </li>
 
